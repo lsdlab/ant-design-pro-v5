@@ -21,8 +21,8 @@ const getNoticeData = (notices: API.NoticeIconItem[]): Record<string, API.Notice
   const newNotices = notices.map((notice) => {
     const newNotice = { ...notice };
 
-    if (newNotice.datetime) {
-      newNotice.datetime = moment(notice.datetime as string).fromNow();
+    if (newNotice.created_at) {
+      newNotice.created_at = moment(notice.created_at as string).fromNow();
     }
 
     if (newNotice.id) {

@@ -32,13 +32,6 @@ export async function login(body: API.LoginParams, options?: { [key: string]: an
   });
 }
 
-/** 此处后端没有提供注释 GET /api/notices */
-export async function getNotices(options?: { [key: string]: any }) {
-  return request<API.NoticeIconList>('/api/notices', {
-    method: 'GET',
-    ...(options || {}),
-  });
-}
 
 /** 获取规则列表 GET /api/rule */
 export async function rule(
@@ -118,12 +111,18 @@ export async function getUsers(
   },
   options?: { [key: string]: any },
 ) {
-  // console.log(params);
   return request<API.UserList>('/api/v1/users/', {
     method: 'GET',
     params: {
       ...params,
     },
+    ...(options || {}),
+  });
+}
+
+export async function getNotices(options?: { [key: string]: any }) {
+  return request<API.NoticeIconList>('/api/v1/notices/', {
+    method: 'GET',
     ...(options || {}),
   });
 }

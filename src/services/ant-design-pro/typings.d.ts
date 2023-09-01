@@ -81,7 +81,6 @@ declare namespace API {
     data?: NoticeIconItem[];
     /** 列表的内容总数 */
     total?: number;
-    success?: boolean;
   };
 
   type NoticeIconItemType = 'notification' | 'message' | 'event';
