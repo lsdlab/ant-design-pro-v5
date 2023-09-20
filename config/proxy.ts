@@ -1,6 +1,6 @@
 export default {
   dev: {
-    '/api/': {
+    '/api/v1/': {
       target: 'http://localhost:8000',
       changeOrigin: true,
     },

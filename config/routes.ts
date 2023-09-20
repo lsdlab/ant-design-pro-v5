@@ -20,29 +20,45 @@
     component: './Welcome',
   },
   {
-    path: '/admin',
-    name: 'admin',
-    icon: 'crown',
-    // access: 'canAd min',
+    name: 'account',
+    icon: 'user',
+    path: '/account',
     routes: [
       {
-        path: '/admin/sub-page',
-        name: 'sub-page',
-        icon: 'smile',
-        component: './Welcome',
+        path: '/account',
+        redirect: '/account/center',
       },
       {
-        component: './404',
+        name: 'center',
+        icon: 'smile',
+        path: '/account/center',
+        component: './account/center',
+      },
+      {
+        name: 'settings',
+        icon: 'smile',
+        path: '/account/settings',
+        component: './account/settings',
       },
     ],
   },
   // {
-  //   name: 'list.table-list',
-  //   icon: 'table',
-  //   path: '/list',
-  //   component: './TableList',
+  //   path: '/admin',
+  //   name: 'admin',
+  //   icon: 'crown',
+  //   // access: 'canAdmin',
+  //   routes: [
+  //     {
+  //       path: '/admin/sub-page',
+  //       name: 'sub-page',
+  //       icon: 'smile',
+  //       component: './Welcome',
+  //     },
+  //     {
+  //       component: './404',
+  //     },
+  //   ],
   // },
-
   {
     path: '/example',
     name: 'example',
