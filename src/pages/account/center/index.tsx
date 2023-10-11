@@ -161,6 +161,11 @@ const Center: React.FC<RouteChildrenProps> = () => {
           </Card>
         </Col>
 
+        <Col lg={17} md={24}>
+          <Card bordered={false}>
+            <div></div>
+          </Card>
+        </Col>
       </Row>
     </GridContent>
   );
